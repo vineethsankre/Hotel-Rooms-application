@@ -1,9 +1,17 @@
-/*
- *
- * You can use the following import statements
- * 
- * import java.util.ArrayList;
- * 
- */
+package com.example.nxtstayz.repository;
 
-// Write your code here
+import java.util.ArrayList;
+import com.example.nxtstayz.model.Hotel;
+
+public interface HotelRepository {
+    ArrayList<Hotel> getHotels();
+
+    Hotel getHotelById(int hotelId);
+
+    Hotel addHotel(Hotel hotel);
+
+    Hotel updateHotel(int hotelId, Hotel hotel);
+
+    void deleteHotel(int hotelId);
+
+}

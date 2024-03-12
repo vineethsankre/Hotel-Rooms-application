@@ -1,5 +1,6 @@
 package com.example.nxtstayz.model;
 
+import com.example.nxtstayz.model.Hotel;
 import javax.persistence.*;
 
 @Entity
@@ -20,7 +21,7 @@ public class Room {
     private double price;
 
     @ManyToOne
-    @JoinColumn(name = "hotelid");
+    @JoinColumn(name = "hotelid")
     private Hotel hotel;
 
     public Room() {
@@ -63,7 +64,12 @@ public class Room {
 
     public void setPrice(double price) {
         this.price = price;
-
+    }
+    public Hotel getHotel() {
+        return hotel;
+    }
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
     }
 
 }
